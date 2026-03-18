@@ -1,0 +1,9 @@
+a=input()    #利用input函数输入数据
+if a[-1]=='币':   #完成人民币与美元的转换
+    mei=float(a[:-1])/7.2
+    print(f"转换后的美元金额为{mei}")   #格式化输出
+elif a[-1]=='元':
+    ren=float(a[:-1])*7.2
+    print(f"转换后人民币的金额为{ren}")
+else:
+    print("出错")
