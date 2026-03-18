@@ -1,0 +1,30 @@
+import turtle as tte   #为了方便，将turtle当作tte
+tte.goto(-100,150)   #决定画笔的坐标，这很重要！！！
+tte.setup(800,600)    #创建画布
+tte.pencolor("red")   #设置边框的颜色
+tte.fillcolor("yellow")  #设置填充颜色
+#移动到起点并落笔（必须在循环前落笔）
+tte.penup()
+tte.pendown()   #提前落笔，保证第一笔就有边框
+tte.begin_fill()  #开始填充
+for i in range(7):  #绘制正六边形
+    tte.pensize(5)  #画笔宽度
+    tte.forward(200)  #画笔向前移动200个像素
+    tte.right(60)   #画笔向右转动60度
+tte.pendown()
+tte.end_fill()  #填充结束
+tte.done()  #这行代码的功能：保持窗口
+
+'''
+绘制图形的turtle库
+库的引用共3种  1.import turtle   2.from turtle import <函数名> 或者from turtle import *   3.import <库名> as <库别名>
+turtle.setup(窗口宽度，窗口长度)
+turtle.penup/pu/up()  turtle.pendown/pd/down()
+turtle.pensize(width)  或者 turtle.width()
+turtle.pencolor()
+turtle.forward/fd(distance) 向前
+turtle.seth/setheading(angle)  turtle.left(angle)  turtle.right(angle)   正数：逆时针方向，负数：顺时针方向
+turtle.circle(radius，extent) 用于绘制圆形和弧形  参数分别为弧形半径和圆心角   当extent=None时，绘制一整个圆形
+turtle.goto(x,y)
+turtle.home()   设置当前画笔位置为原点，朝向东
+'''
